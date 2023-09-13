@@ -1,0 +1,63 @@
+{
+    "name": "Svelte Node",
+    "image": "mcr.microsoft.com/devcontainers/typescript-node",
+    "forwardPorts": [5000],
+    "hostRequirements": {
+      "cpus": 4
+    },
+    "postCreateCommand": "npm ci",
+    "postStartCommand": "npm run dev",
+    "customizations": {
+      "vscode": {
+        "extensions": [
+			"alexdima.copy-relative-path",
+			"benjaminadk.emojis4git",
+			"britesnow.vscode-toggle-quotes",
+			"christian-kohler.path-intellisense",
+			"davidanson.vscode-markdownlint",
+			"dbaeumer.vscode-eslint",
+			"editorconfig.editorconfig",
+			"esbenp.prettier-vscode",
+			"formulahendry.auto-rename-tag",
+			"svelte.svelte-vscode",
+			"jerryhong.autofilename",
+			"naumovs.color-highlight",
+			"robinbentley.sass-indented",
+			"shinnn.stylelint",
+			"streetsidesoftware.code-spell-checker",
+			"waderyan.gitblame",
+			"yzhang.markdown-all-in-one",
+			"ph1p.zeit-co-vscode-schemas",
+			"AaronDill.vercel-project-manager-vscode",
+			"DSKWRK.vscode-generate-getter-setter",
+			"eamodio.gitlens",
+			"codezombiech.gitignore",
+			"devantler.github-extension-pack",
+			"ms-vscode.vscode-typescript-next",
+			"cmstead.jsrefactor",
+			"passionkind.prettier-vscode-with-tabs",
+			"rvest.vs-code-prettier-eslint",
+			"hb432.prettier-eslint-typescript",
+			"mutantdino.resourcemonitor",
+			"mrmlnc.vscode-scss"
+		],
+        "settings": {
+          "editor.formatOnSave": true,
+          "files.eol": "\n",
+          "prettier.requireConfig": true,
+          "terminal.integrated.defaultProfile.linux": "zsh",
+		  "terminal.integrated.hideOnStartup": "always" 
+        }
+      }
+	},
+	"features": {
+		"ghcr.io/devcontainers-contrib/features/vercel-serve:1": {
+			"version": "latest"
+		},
+		"ghcr.io/devcontainers-contrib/features/zsh-plugins:0": {
+			"plugins": "ssh-agent npm",
+			"omzPlugins": "https://github.com/zsh-users/zsh-autosuggestions",
+			"username": "vscode"
+		}
+	}
+  }
